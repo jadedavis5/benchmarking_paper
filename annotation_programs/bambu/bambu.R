@@ -7,11 +7,11 @@ library(bambu)
 
 ################ Reference guided ################
 sample <- list.files(path = ".", pattern = "rna_011_ptt_f32_.*\\.bam$")
-genome <- "220816_RGT_Planet_pseudomolecules_and_unplaced_contigs_CPclean.fasta"
-
-bambuAnnotations <- prepareAnnotations("RGT_Planet_v2_bambu.gtf")
+genome <- "../analysis_files/220816_RGT_Planet_pseudomolecules_and_unplaced_contigs_CPclean.fasta"
+annotation <- "RGT_Planet_v2_bambu.gtf"
 
 #Make sure that the reference GTF input has  gene_id BEFORE transcript_id in the 9th column
+bambuAnnotations <- prepareAnnotations(annotation)
 
 seRG.discoveryOnly <- bambu(reads = sample, genome = genome, annotation = bambuAnnotations, quant = FALSE)
 writeToGTF(seRG.discoveryOnly, "outputAnnotation_UNCLEAN_BAMBUref.gtf")
