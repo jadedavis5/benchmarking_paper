@@ -1,7 +1,7 @@
 library(tidyverse)
 library(ggplot2)
 
-programs <- c("STref","STnoref","IQref","IQnoref","FLAIRref","BAMBUref","BAMBUnoref", "FLAMESref")
+programs <- c("STref","IQref","BAMBUref",  "FLAMESref", "FLAIRref","STnoref","IQnoref","BAMBUnoref")
 
 
 for (program in programs) {
