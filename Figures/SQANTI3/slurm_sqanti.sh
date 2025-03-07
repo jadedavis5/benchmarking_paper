@@ -15,7 +15,7 @@
 module load singularity/4.1.0-slurm
 
 
-#singularity pull docker://anaconesalab/sqanti3
+#singularity build sqanti3.sif docker://anaconesalab/sqanti3
 reference=/scratch/fl3/jdavis/REFERENCES/RGT_2_2024/RGT_Planet_v2.gtf
 genome=/scratch/fl3/jdavis/REFERENCES/RGT_2_2024/220816_RGT_Planet_pseudomolecules_and_unplaced_contigs_CPclean.fasta
 
