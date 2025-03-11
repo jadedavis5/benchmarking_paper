@@ -1,3 +1,7 @@
+#This didn't end up working on Windows https://github.com/mritchielab/FLAMES/issues/53
+#Tested on Linux instead
+
+
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 #install.packages('arrangements')
@@ -25,3 +29,6 @@ se <- bulk_long_pipeline(
   outdir = outdir,
   minimap2 = NULL,
   config_file = "config.json")
+
+
+
