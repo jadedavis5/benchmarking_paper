@@ -20,7 +20,7 @@ CXX14=g++-10
 CXX17=g++-10
 FC=gfortran-10
 F77=gfortran-10'
-```
+
 
 Then want to run it on the terminal so add the library path from RStudio
 nano ~/.Renviron
@@ -29,3 +29,4 @@ R_LIBS_USER="/home/rstudio/R/x86_64-pc-linux-gnu-library/4.4"
 
 
 Rscript -e ".libPaths()" #Check that it was added
+```
