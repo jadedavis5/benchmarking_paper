@@ -1,4 +1,4 @@
-Set up Linux enviornment in CLI
+Set up Linux enviornment in CLI before running R script
 
 
 ```
