@@ -15,7 +15,7 @@ BiocManager::install("mritchielab/FLAMES")
 library(FLAMES)
 
 
-#Set up directories and biofilecache
+#Run FLAMES
 library(BiocFileCache)
 
 #Run this on the terminal to add write permission to mounted storage drive 
@@ -32,14 +32,13 @@ fastq2 <- bfc[[names(BiocFileCache::bfcadd(bfc, "nb29_fastq", "/mnt/sdd/files/rn
 
 fastq_dir <- paste(path, "fastq_dir", sep = "/")
 dir.create(fastq_dir)
-file.copy(c(fastq1, fastq2), fastq_dir)
-#> [1] TRUE TRUE
-unlink(c(fastq1, fastq2)) # the original files can be deleted
 
-fastq <- bfc[[names(BiocFileCache::bfcadd(bfc, "merged.fastq.gz", "merged.fastq.gz"))]]
+file.copy(c(fastq1, fastq2), fastq_dir)
+unlink(c(fastq1, fastq2)) 
 
 outdir <- tempfile()
 dir.create(outdir)
 
 
-se <- bulk_long_pipeline()
+se <- bulk_long_pipeline(annotation = annotation, fastq = fastq_dir, outdir = outdir, genome_fa = genome_fa, config_file = "config.json")
+
