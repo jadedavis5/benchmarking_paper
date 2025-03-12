@@ -20,11 +20,13 @@ library(BiocFileCache)
 
 #Run this on the terminal to add write permission to mounted storage drive 
 #sudo chmod u+w /mnt/sdd/bfc
+removebfc(bfc)
+
 
 path=tempfile(pattern = "file", tmpdir = "/mnt/sdd/bfc", fileext = "db")
 bfc <- BiocFileCache::BiocFileCache(path, ask = FALSE)
 
-annotation <- bfc[[names(BiocFileCache::bfcadd(bfc, "RGT_Planet_v2.gff", "/mnt/sdd/files/RGT_Planet_v2.gff"))]]
+annotation <- bfc[[names(BiocFileCache::bfcadd(bfc, "RGT_Planet_v2.gtf", "/mnt/sdd/files/RGT_Planet_v2.gtf"))]]
 genome_fa <- bfc[[names(BiocFileCache::bfcadd(bfc, "220816_RGT_Planet_pseudomolecules_and_unplaced_contigs_CPclean.fasta", "/mnt/sdd/files/220816_RGT_Planet_pseudomolecules_and_unplaced_contigs_CPclean.fasta"))]]
 
 fastq1 <- bfc[[names(BiocFileCache::bfcadd(bfc, "control_fastq", "/mnt/sdd/files/rna_011_ptt_f32_control_chopper-filtered.fq.gz"))]]
@@ -39,6 +41,4 @@ unlink(c(fastq1, fastq2))
 outdir <- tempfile()
 dir.create(outdir)
 
-
 se <- bulk_long_pipeline(annotation = annotation, fastq = fastq_dir, outdir = outdir, genome_fa = genome_fa, config_file = "config.json")
-
