@@ -15,13 +15,26 @@ BiocManager::install("mritchielab/FLAMES")
 library(FLAMES)
 
 
-#Run FLAMES
+#Set up directories and biofilecache
 library(BiocFileCache)
 
-bfc <- BiocFileCache::BiocFileCache("/mnt/sdd/bfc", ask = FALSE)
+#Run this on the terminal to add write permission to mounted storage drive 
+#sudo chmod u+w /mnt/sdd/bfc
+
+path=tempfile(pattern = "file", tmpdir = "/mnt/sdd/bfc", fileext = "db")
+bfc <- BiocFileCache::BiocFileCache(path, ask = FALSE)
 
 annotation <- bfc[[names(BiocFileCache::bfcadd(bfc, "RGT_Planet_v2.gff", "/mnt/sdd/files/RGT_Planet_v2.gff"))]]
 genome_fa <- bfc[[names(BiocFileCache::bfcadd(bfc, "220816_RGT_Planet_pseudomolecules_and_unplaced_contigs_CPclean.fasta", "/mnt/sdd/files/220816_RGT_Planet_pseudomolecules_and_unplaced_contigs_CPclean.fasta"))]]
+
+fastq1 <- bfc[[names(BiocFileCache::bfcadd(bfc, "control_fastq", "/mnt/sdd/files/rna_011_ptt_f32_control_chopper-filtered.fq.gz"))]]
+fastq2 <- bfc[[names(BiocFileCache::bfcadd(bfc, "nb29_fastq", "/mnt/sdd/files/rna_011_ptt_f32_nb29_chopper-filtered.fq.gz"))]]
+
+fastq_dir <- paste(path, "fastq_dir", sep = "/")
+dir.create(fastq_dir)
+file.copy(c(fastq1, fastq2), fastq_dir)
+#> [1] TRUE TRUE
+unlink(c(fastq1, fastq2)) # the original files can be deleted
 
 fastq <- bfc[[names(BiocFileCache::bfcadd(bfc, "merged.fastq.gz", "merged.fastq.gz"))]]
 
