@@ -1,4 +1,4 @@
-Using a 64 Gb RAM machine (too small = minimap2 won't run) w/ 20Gb for root dir and 50 Gb for storage dir
+Using a 64 Gb RAM machine (too small = minimap2 won't run) w/ 20Gb for root dir and 70 Gb for storage dir
 
 Set up Linux enviornment in CLI before running R script
 
