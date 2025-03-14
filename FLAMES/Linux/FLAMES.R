@@ -38,7 +38,9 @@ dir.create(fastq_dir)
 file.copy(c(fastq1, fastq2), fastq_dir)
 unlink(c(fastq1, fastq2)) 
 
-outdir <- tempfile()
-dir.create(outdir)
 
-se <- bulk_long_pipeline(annotation = annotation, fastq = fastq_dir, outdir = outdir, genome_fa = genome_fa, config_file = "config.json")
+se <- bulk_long_pipeline(annotation = annotation, fastq = fastq_dir, outdir = outdir = "/mnt/sdd/rstudio-work/outdir/", genome_fa = genome_fa, config_file = "config.json")
+
+######## Need to create CSI indexes of BAM's when pipeline fails as it doesn't support CSI (only BAI) and then start again- will pick up files ########
+#samtools index -c outdir/*.bam
+
