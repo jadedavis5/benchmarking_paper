@@ -5,10 +5,16 @@ library(ggrepel)
 
 data <- read.csv("sensitivity_precision.csv")
 
+#method_order <- c(
+# "StringTie2-ref", "IsoQuant-ref","Bambu-ref", "FLAIR-ref", "FLAMES-ref",
+#  "Bambu-refFree", "IsoQuant-refFree", "StringTie2-refFree"
+#)
 method_order <- c(
-  "StringTie2-ref", "IsoQuant-ref","Bambu-ref", "FLAIR-ref", "FLAMES-ref",
-  "Bambu-refFree", "IsoQuant-refFree", "StringTie2-refFree"
+  "StringTie2-ref", "StringTie2-refFree" ,"IsoQuant-ref",  "IsoQuant-refFree" , 
+  "Bambu-ref","Bambu-refFree", "FLAIR-ref", "FLAMES-ref"
 )
+
+
 data$Method <- factor(data$Method, levels = method_order)
 
 method_colors <- c(
@@ -45,10 +51,16 @@ plot <- ggplot(data, aes(x = Precision, y = Sensitivity, color = Method, shape =
     legend.title = element_text(size = 14),
     legend.text = element_text(size = 12),
     plot.margin = margin(1, 6, 1, 1, "cm"),
-    legend.position = c(1, 1), 
-    legend.justification = c(0, 1) 
+    legend.position = "bottom", 
+    legend.justification = "center",
+    legend.spacing.x = unit(0.8, 'cm')
+  ) +
+  guides(
+    color = guide_legend(ncol = 6), 
+    shape = guide_legend(nrow = 2, byrow = TRUE)
   )
 print(plot)
 #print(plot + theme(panel.background = element_rect(fill = '#d4f3b7', colour = 'black'), plot.background = element_rect(fill = "transparent")))
 
-ggsave(filename = "sensitivty-precision.tiff", plot = plot, device = 'tiff', width= 12, height= 6.17, dpi = 350)
+ggsave(filename = "sensitivty-precision.tiff", plot = plot, device = 'tiff', width= 9, height= 6.17, dpi = 350)
+
