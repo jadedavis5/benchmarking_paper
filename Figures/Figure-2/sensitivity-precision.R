@@ -1,3 +1,4 @@
+#Sensitivity and precision plot
 library(ggplot2)
 #install.packages("ggrepel")
 library(ggrepel)
@@ -23,7 +24,7 @@ method_shapes <- c(
 
 
 plot <- ggplot(data, aes(x = Precision, y = Sensitivity, color = Method, shape = Method)) +
-  geom_point(size = 5.3) + 
+  geom_point(size = 5.3, alpha = 0.8) + 
   labs(
     x = "Precision (%)",
     y = "Sensitivity (%)",
@@ -46,8 +47,8 @@ plot <- ggplot(data, aes(x = Precision, y = Sensitivity, color = Method, shape =
     plot.margin = margin(1, 6, 1, 1, "cm"),
     legend.position = c(1, 1), 
     legend.justification = c(0, 1) 
-    )
+  )
 print(plot)
 #print(plot + theme(panel.background = element_rect(fill = '#d4f3b7', colour = 'black'), plot.background = element_rect(fill = "transparent")))
 
-ggsave(filename = "sensitivty-precision.tiff", plot = plot, device = 'tiff', width= 7.5, height= 6.17, dpi = 350)
+ggsave(filename = "sensitivty-precision.tiff", plot = plot, device = 'tiff', width= 12, height= 6.17, dpi = 350)
