@@ -29,3 +29,7 @@ for run in STref STnoref BAMBUref BAMBUnoref IQref IQnoref FLAIRref
 do
 singularity run sqanti3_latest.sif sqanti3_qc.py /scratch/fl3/jdavis/final_annotations/final_results/annotations/GTF/outputAnnotation_${run}.gtf $reference $genome -o $run --short_reads shortRead.fofn
 done
+
+
+#Find out how many ISM in BAMBUnoref are 3' fragment (missing 5' end)
+awk '{if ($6 == "incomplete-splice-match") print $15}' BAMBUnoref_classification.txt | sort | uniq -c
