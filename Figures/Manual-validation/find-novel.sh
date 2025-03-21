@@ -35,6 +35,7 @@ comm -12 Panbarlex_RGT_PLANET_disease-resistance.txt RGT_v2_expressedInDisease.t
 
 ### Identify transcripts novel to RGT Planet for reference guided annotations ###
 
+mkdir novel_transcripts
 for gff_id in IQref STref BAMBUref FLAIRref FLAMESref
 do
 
@@ -46,6 +47,6 @@ do
 	tmap="${base_dir}/${gff_id}_gffcompareCMP.${base_name}.tmap"
 	rm *CMP*
 	
-	cat $tmap | awk '$3=="u"{print $0}' | cut -f5 | sort | uniq > ${gff_id}_novel.txt
+	cat $tmap | awk '$3=="u"{print $0}' | cut -f5 | sort | uniq > novel_transcripts/${gff_id}_novel.txt
 
 done
