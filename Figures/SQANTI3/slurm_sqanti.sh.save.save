@@ -32,4 +32,3 @@ done
 
 
 #Find out how many ISM in BAMBUnoref are 3' fragment (missing 5' end)
-awk '{if ($6 == "incomplete-splice_match") print $15}' BAMBUnoref_classification.txt | sort | uniq -c
