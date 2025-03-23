@@ -53,8 +53,10 @@ singularity exec \
     --output-dir /output \
     --tempdir /temp
 
-#Find out how many have predicted functions overall
+#Find out how many have predicted functions overall and put them into a list for manual validation
 grep 'GO:' output/${gff_id}-novel_proteins.fa.tsv | cut -f 1 | sort | uniq | wc -l
+grep 'GO:' output/${gff_id}-novel_proteins.fa.tsv | cut -f 1 | sort | uniq > ${gff_id}-novel-functional-forValidation.txt
+
 
 #Turn into csv for Rstudio analysis
 tr '\t' ',' < output/${gff_id}-novel_proteins.fa.tsv > ${gff_id}-novel_proteins.fa.csv
