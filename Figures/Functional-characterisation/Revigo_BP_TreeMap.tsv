@@ -3,41 +3,27 @@
 # threshold to detect redundancies (c=0.10) and fill the 'representative' column, while normally c>=0.4 is recommended.
 # To export a reduced-redundancy set of GO terms, go to the Scatterplot or Table tab, and export from there.
 TermID  Name    Frequency       Value   Uniqueness      Dispensability  Representative
-"GO:0006086"    "acetyl-CoA biosynthetic process from pyruvate" 0.07727833078805497     3       0.7682373370663251      0.06577187      null
-"GO:0006081"    "cellular aldehyde metabolic process"   0.3017534821247861      1       0.9092107937897486      0.11625514      "acetyl-CoA biosynthetic process from pyruvate"
-"GO:0006561"    "proline biosynthetic process"  0.018399602568584517    1       0.8691277006003779      0.3869977       "acetyl-CoA biosynthetic process from pyruvate"
-"GO:0009060"    "aerobic respiration"   0.7746232681374082      1       0.8851244175838667      0.10308688      "acetyl-CoA biosynthetic process from pyruvate"
-"GO:0006886"    "intracellular protein transport"       1.6817236747686248      2       0.8255150612243924      0.04130721      null
-"GO:0006891"    "intra-Golgi vesicle-mediated transport"        0.24655467441903256     1       0.8624277097484384      0.34154717      "intracellular protein transport"
-"GO:0015990"    "electron transport coupled proton transport"   0.07359841027433807     1       0.8951467302208543      0.30500472      "intracellular protein transport"
-"GO:0016192"    "vesicle-mediated transport"    2.406668015970855       1       0.8614966200175116      0.44115782      "intracellular protein transport"
-"GO:0048254"    "snoRNA localization"   0.011039761541150711    1       0.9176250520177939      0.4446538       "intracellular protein transport"
-"GO:0007166"    "cell surface receptor signaling pathway"       1.2162137297834366      5       0.8259381027535114      0       null
-"GO:0000076"    "DNA replication checkpoint signaling"  0.06807852950376272     1       0.8482359088743783      0.47535505      "cell surface receptor signaling pathway"
-"GO:0006298"    "mismatch repair"       0.09567793335663949     2       0.7316418660857854      0.36091871      "cell surface receptor signaling pathway"
-"GO:0006357"    "regulation of transcription by RNA polymerase II"      2.7820199083699793      3       0.8990183145229854      0.31386497      "cell surface receptor signaling pathway"
-"GO:0009725"    "response to hormone"   3.1242525161456514      1       0.9424410861844614      0.32106717      "cell surface receptor signaling pathway"
-"GO:0043484"    "regulation of RNA splicing"    0.09383797309978105     1       0.9301681649209225      0.32313907      "cell surface receptor signaling pathway"
-"GO:0045893"    "positive regulation of DNA-templated transcription"    1.457248523431894       1       0.8932438992692646      0.49167066      "cell surface receptor signaling pathway"
-"GO:0045910"    "negative regulation of DNA recombination"      0.11223757566836558     2       0.8805776505528466      0.36030308      "cell surface receptor signaling pathway"
-"GO:0051726"    "regulation of cell cycle"      0.7157445399179378      1       0.93516266403614        0.26828741      "cell surface receptor signaling pathway"
-"GO:0098542"    "defense response to other organism"    1.4241292388084419      1       0.9316086597582398      0.28609311      "cell surface receptor signaling pathway"
-"GO:0016567"    "protein ubiquitination"        4.093911571510056       3       0.859569516811033       -0      null
-"GO:0000463"    "maturation of LSU-rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA)"      0.1287972179800916      2       0.6101687715563956      0.44356715      "protein ubiquitination"
-"GO:0005975"    "carbohydrate metabolic process"        5.902592504001913       1       0.9338566924336195      0.11309936      "protein ubiquitination"
-"GO:0006388"    "tRNA splicing, via endonucleolytic cleavage and ligation"      0.05151888719203665     2       0.7317182505227553      0.35798428      "protein ubiquitination"
-"GO:0006412"    "translation"   3.063533827669322       3       0.75582828038812        0.299316        "protein ubiquitination"
-"GO:0006470"    "protein dephosphorylation"     0.5501481168006771      1       0.8437707924619462      0.36163132      "protein ubiquitination"
-"GO:0006508"    "proteolysis"   6.695615374707907       4       0.8709767014462425      0.33898629      "protein ubiquitination"
-"GO:0010499"    "proteasomal ubiquitin-independent protein catabolic process"   0.003679920513716904    1       0.9237448209182137      0.46920326      "protein ubiquitination"
-"GO:0051603"    "proteolysis involved in protein catabolic process"     3.6891203150011957      1       0.8717793961643268      0.3078787       "protein ubiquitination"
-"GO:0080156"    "mitochondrial mRNA modification"       0.057038767962612       1       0.7988264249808028      0.26004596      "protein ubiquitination"
-"GO:0032196"    "transposition" 0.016559642311726065    2       0.9668441382840234      0.0267545       null
-"GO:0034314"    "Arp2/3 complex-mediated actin nucleation"      0.0496789269351782      4       0.8142051043192685      0.02920049      null
-"GO:0006334"    "nucleosome assembly"   0.2023956282544297      3       0.7518643342729071      0.2793755       "Arp2/3 complex-mediated actin nucleation"
-"GO:0007005"    "mitochondrion organization"    0.419510938563727       1       0.7934811847612285      0.47912136      "Arp2/3 complex-mediated actin nucleation"
-"GO:0010265"    "SCF complex assembly"  0.016559642311726065    2       0.7918992307768755      0.49578997      "Arp2/3 complex-mediated actin nucleation"
-"GO:0030261"    "chromosome condensation"       0.1287972179800916      2       0.8038014023322627      0.40744786      "Arp2/3 complex-mediated actin nucleation"
-"GO:0052324"    "plant-type cell wall cellulose biosynthetic process"   0.057038767962612       1       0.7082004655865258      0.40746641      "Arp2/3 complex-mediated actin nucleation"
-"GO:0048544"    "recognition of pollen" 0.7967027912197098      1       0.9550670922507759      0.03796803      null
-"GO:1903189"    "glyoxal metabolic process"     0.02943936410973523     1       0.9240550182507888      0.08104867      null
+"GO:0006081"    "cellular aldehyde metabolic process"   0.3017534821247861      1       0.9156214321219334      0.04834864      null
+"GO:0006334"    "nucleosome assembly"   0.2023956282544297      3       0.8679556446541773      0.03306552      null
+"GO:0030261"    "chromosome condensation"       0.1287972179800916      1       0.8992732221159244      0.30007561      "nucleosome assembly"
+"GO:0006886"    "intracellular protein transport"       1.6817236747686248      2       0.7699678334197184      0.04130721      null
+"GO:0006891"    "intra-Golgi vesicle-mediated transport"        0.24655467441903256     1       0.7976521482644735      0.34154717      "intracellular protein transport"
+"GO:0016192"    "vesicle-mediated transport"    2.406668015970855       1       0.8153636729590524      0.44115782      "intracellular protein transport"
+"GO:0007166"    "cell surface receptor signaling pathway"       1.2162137297834366      3       0.8289774475901429      0       null
+"GO:0006357"    "regulation of transcription by RNA polymerase II"      2.7820199083699793      1       0.8615620038293401      0.49167066      "cell surface receptor signaling pathway"
+"GO:0006952"    "defense response"      6.577857918268966       1       0.9588788852775231      0.40046685      "cell surface receptor signaling pathway"
+"GO:0009725"    "response to hormone"   3.1242525161456514      1       0.9606667945018578      0.31463318      "cell surface receptor signaling pathway"
+"GO:0045893"    "positive regulation of DNA-templated transcription"    1.457248523431894       1       0.8445940829708642      0.33916314      "cell surface receptor signaling pathway"
+"GO:0045910"    "negative regulation of DNA recombination"      0.11223757566836558     1       0.899871663515403       0.21052792      "cell surface receptor signaling pathway"
+"GO:0051726"    "regulation of cell cycle"      0.7157445399179378      1       0.9105984210996928      0.26828741      "cell surface receptor signaling pathway"
+"GO:0016567"    "protein ubiquitination"        4.093911571510056       2       0.8587831355049028      -0      null
+"GO:0006086"    "acetyl-CoA biosynthetic process from pyruvate" 0.07727833078805497     1       0.8264040805556191      0.26055142      "protein ubiquitination"
+"GO:0006388"    "tRNA splicing, via endonucleolytic cleavage and ligation"      0.05151888719203665     2       0.769539338835078       0.35798428      "protein ubiquitination"
+"GO:0006412"    "translation"   3.063533827669322       2       0.7621424981369217      0.299316        "protein ubiquitination"
+"GO:0006508"    "proteolysis"   6.695615374707907       2       0.8608411787186419      0.33898629      "protein ubiquitination"
+"GO:0010499"    "proteasomal ubiquitin-independent protein catabolic process"   0.003679920513716904    1       0.9109653098169851      0.46920326      "protein ubiquitination"
+"GO:0030490"    "maturation of SSU-rRNA"        0.27047415775819245     1       0.6921535698615033      0.46797428      "protein ubiquitination"
+"GO:0033260"    "nuclear DNA replication"       0.0993578538703564      1       0.8541604506342967      0.11947943      "protein ubiquitination"
+"GO:0051603"    "proteolysis involved in protein catabolic process"     3.6891203150011957      1       0.8534335753153582      0.3078787       "protein ubiquitination"
+"GO:0032196"    "transposition" 0.016559642311726065    1       0.9682810791203897      0.0267545       null
+"GO:0048544"    "recognition of pollen" 0.7967027912197098      1       0.956537773772566       0.03796803      null
