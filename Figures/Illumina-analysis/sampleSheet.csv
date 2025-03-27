@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+Control-1A,../Control-1A_S25_L001_R1_001.fastq.gz,../Control-1A_S25_L001_R2_001.fastq.gz,auto
+Control-1A,../Control-1A_S25_L002_R1_001.fastq.gz,../Control-1A_S25_L002_R2_001.fastq.gz,auto
+Control-2A,../Control-2A_S26_L001_R1_001.fastq.gz,../Control-2A_S26_L001_R2_001.fastq.gz,auto
+Control-2A,../Control-2A_S26_L002_R1_001.fastq.gz,../Control-2A_S26_L002_R2_001.fastq.gz,auto
+Control-3A,../Control-3A_S27_L001_R1_001.fastq.gz,../Control-3A_S27_L001_R2_001.fastq.gz,auto
+Control-3A,../Control-3A_S27_L002_R1_001.fastq.gz,../Control-3A_S27_L002_R2_001.fastq.gz,auto
+NB29-1A,../NB29-1A_S19_L001_R1_001.fastq.gz,../NB29-1A_S19_L001_R2_001.fastq.gz,auto
+NB29-1A,../NB29-1A_S19_L002_R1_001.fastq.gz,../NB29-1A_S19_L002_R2_001.fastq.gz,auto
+NB29-2A,../NB29-2A_S20_L001_R1_001.fastq.gz,../NB29-2A_S20_L001_R2_001.fastq.gz,auto
+NB29-2A,../NB29-2A_S20_L002_R1_001.fastq.gz,../NB29-2A_S20_L002_R2_001.fastq.gz,auto
+NB29-3A,../NB29-3A_S21_L001_R1_001.fastq.gz,../NB29-3A_S21_L001_R2_001.fastq.gz,auto
+NB29-3A,../NB29-3A_S21_L002_R1_001.fastq.gz,../NB29-3A_S21_L002_R2_001.fastq.gz,auto
