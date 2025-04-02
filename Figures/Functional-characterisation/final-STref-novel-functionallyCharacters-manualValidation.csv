@@ -1,5 +1,5 @@
 transcript,true or false,comment,,,
-transcript10895,FALSE,not full,,,
+﻿transcript10895,FALSE,not full,,,
 transcript10941,TRUE,,,Raw count,Percentage
 transcript11700,TRUE,,,55,74.32432432
 transcript12465,TRUE,,,19,25.67567568
@@ -52,8 +52,8 @@ transcript41292,TRUE,,,,
 transcript41293,FALSE,,,,
 transcript43463,TRUE,,,,
 transcript43464,FALSE,,,,
-transcript43767,TRUE,,,,
-transcript44165,FALSE,not full,,,
+transcript43767,FALSE,not full,,,
+transcript44165,TRUE,,,,
 transcript44805,TRUE,,,,
 transcript45137,FALSE,not full,,,
 transcript46940,TRUE,,,,
