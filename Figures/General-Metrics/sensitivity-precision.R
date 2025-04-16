@@ -10,20 +10,20 @@ data <- read.csv("sensitivity_precision.csv")
 #  "Bambu-refFree", "IsoQuant-refFree", "StringTie2-refFree"
 #)
 method_order <- c(
-  "StringTie2-ref", "StringTie2-refFree" ,"IsoQuant-ref",  "IsoQuant-refFree" , 
-  "Bambu-ref","Bambu-refFree", "FLAIR-ref", "FLAMES-ref"
+  "StringTie2-ref", "StringTie2-deNovo" ,"IsoQuant-ref",  "IsoQuant-deNovo" , 
+  "Bambu-ref","Bambu-deNovo", "FLAIR-ref", "FLAMES-ref"
 )
 
 
 data$Method <- factor(data$Method, levels = method_order)
 
 method_colors <- c(
-  "Bambu-refFree" = "blue", "IsoQuant-refFree" = "green", "StringTie2-refFree" = "red",
+  "Bambu-deNovo" = "blue", "IsoQuant-deNovo" = "green", "StringTie2-deNovo" = "red",
   "Bambu-ref" = "blue", "IsoQuant-ref" = "green", "StringTie2-ref" = "red",
   "FLAIR-ref" = "purple", "FLAMES-ref" = "orange"
 )
 method_shapes <- c(
-  "Bambu-refFree" = 17, "IsoQuant-refFree" = 17, "StringTie2-refFree" = 17,
+  "Bambu-deNovo" = 17, "IsoQuant-deNovo" = 17, "StringTie2-deNovo" = 17,
   "Bambu-ref" = 16, "IsoQuant-ref" = 16, "StringTie2-ref" = 16,
   "FLAIR-ref" = 16, "FLAMES-ref" = 16
 )
