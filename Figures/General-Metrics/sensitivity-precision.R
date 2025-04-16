@@ -48,7 +48,7 @@ plot <- ggplot(data, aes(x = Precision, y = Sensitivity, color = Method, shape =
     axis.title.x = element_text(size = 16, face = "bold"),
     axis.title.y = element_text(size = 16, face = "bold"),
     plot.title = element_text(size = 14, face = "bold"),
-    legend.title = element_text(size = 14),
+    legend.title = element_text(size = 14,face = "bold"),
     legend.text = element_text(size = 12),
     plot.margin = margin(1, 6, 1, 1, "cm"),
     legend.position = "bottom", 
@@ -63,4 +63,5 @@ print(plot)
 #print(plot + theme(panel.background = element_rect(fill = '#d4f3b7', colour = 'black'), plot.background = element_rect(fill = "transparent")))
 
 ggsave(filename = "sensitivty-precision.tiff", plot = plot, device = 'tiff', width= 9, height= 6.17, dpi = 350)
+
 
