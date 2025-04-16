@@ -7,14 +7,14 @@ file.copy("STnoref_junctions.txt", "StringTie2.refFree_junctions.txt")
 file.copy("IQref_junctions.txt", "IsoQuant.ref_junctions.txt")
 file.copy("IQnoref_junctions.txt", "IsoQuant.refFree_junctions.txt")
 
-file.copy("BAMBUref_junctions.txt", "BAMBU.ref_junctions.txt")
-file.copy("BAMBUnoref_junctions.txt", "BAMBU.refFree_junctions.txt")
+file.copy("BAMBUref_junctions.txt", "Bambu.ref_junctions.txt")
+file.copy("BAMBUnoref_junctions.txt", "Bambu.refFree_junctions.txt")
 
 file.copy("FLAMESref_junctions.txt", "FLAMES.ref_junctions.txt")
 file.copy("FLAIRref_junctions.txt", "FLAIR.ref_junctions.txt")
 
 
-programs <- c("StringTie2.ref", "IsoQuant.ref","BAMBU.ref","FLAIR.ref","FLAMES.ref","StringTie2.refFree","IsoQuant.refFree","BAMBU.refFree")
+programs <- c("StringTie2.ref", "IsoQuant.ref","Bambu.ref","FLAIR.ref","FLAMES.ref","StringTie2.refFree","IsoQuant.refFree","Bambu.refFree")
 
 for (program in programs) {
   file_name <- paste0(program, "_junctions.txt")
@@ -39,7 +39,7 @@ plot_data <- data_combined %>%
                names_to = "category", values_to = "count") %>%
   group_by(Method) %>%
   mutate(percentage = ifelse(category == "novel_supported", 
-                             round(100 * count / sum(count), 1), NA)) %>%
+                             round(100 * count / sum(count), 0), NA)) %>%
   ungroup()
 
 #Plot
@@ -48,6 +48,7 @@ category_order <- c("novel_unsupported", "novel_supported")
 category_labels <- setNames(category_names, category_order) 
 
 plot <- ggplot(plot_data, aes(x = Method, y = count, fill = category)) +
+  scale_x_discrete(labels = gsub("\\.(ref|refFree)", "", programs)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = ifelse(!is.na(percentage), paste0(percentage, "%"), "")), 
             position = position_stack(vjust = 0.5), size = 5) +
@@ -68,10 +69,16 @@ plot <- ggplot(plot_data, aes(x = Method, y = count, fill = category)) +
   theme(axis.text.x = element_text(angle=45, hjust = 1, size=13), 
         axis.text.y = element_text(size=13), 
         axis.title.y = element_text(face = "bold",size=15),
-        axis.title.x = element_blank(),
+        axis.title.x = element_text(face = "bold",size=15),
         legend.text = element_text(size = 15),
         legend.title = element_text(size = 18)) 
 
 plot
+library(dplyr)
+
+flair_novel <- data_combined %>%
+  filter(Method == "FLAIR.ref", junction_category == "novel")
+
+print(flair_novel)
 ggsave(filename = "junction-support.tiff", plot = plot, device = 'tiff', width= 10, height= 7.22, dpi = 500)
 
