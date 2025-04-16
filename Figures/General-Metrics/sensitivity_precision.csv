@@ -1,7 +1,7 @@
 ﻿Method,Precision,Sensitivity
-Bambu-refFree,20.8,70.9
-IsoQuant-refFree,51.9,71.1
-StringTie2-refFree,52.6,63.1
+Bambu-deNovo,20.8,70.9
+IsoQuant-deNovo,51.9,71.1
+StringTie2-deNovo,52.6,63.1
 Bambu-ref,95.2,99.9
 IsoQuant-ref,90,99.9
 StringTie2-ref,89.3,99.7
