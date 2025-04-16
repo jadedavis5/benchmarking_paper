@@ -9,14 +9,14 @@ file.copy("STnoref_classification.txt", "StringTie2.refFree_classification.txt")
 file.copy("IQref_classification.txt", "IsoQuant.ref_classification.txt")
 file.copy("IQnoref_classification.txt", "IsoQuant.refFree_classification.txt")
 
-file.copy("BAMBUref_classification.txt", "BAMBU.ref_classification.txt")
-file.copy("BAMBUnoref_classification.txt", "BAMBU.refFree_classification.txt")
+file.copy("BAMBUref_classification.txt", "Bambu.ref_classification.txt")
+file.copy("BAMBUnoref_classification.txt", "Bambu.refFree_classification.txt")
 
 file.copy("FLAMESref_classification.txt", "FLAMES.ref_classification.txt")
 file.copy("FLAIRref_classification.txt", "FLAIR.ref_classification.txt")
 
 
-programs <- c("StringTie2.ref", "IsoQuant.ref","BAMBU.ref","FLAIR.ref","FLAMES.ref","StringTie2.refFree","IsoQuant.refFree","BAMBU.refFree")
+programs <- c("StringTie2.ref", "IsoQuant.ref","Bambu.ref","FLAIR.ref","FLAMES.ref","StringTie2.refFree","IsoQuant.refFree","Bambu.refFree")
 
 
 for (program in programs) {
@@ -49,8 +49,10 @@ data_combined$structural_category <- factor(data_combined$structural_category,
                                             levels = category_order)
 
 plot <- ggplot(data_combined, aes(x = Method, fill = structural_category)) +
+  
   geom_bar(position = "stack") +
   labs(x = "Method", y = "Transcript count", fill = "Structural Category") +
+  scale_x_discrete(labels = gsub("\\.(ref|refFree)", "", programs)) +
   scale_fill_brewer(palette = "Set3",limits = category_order,labels = category_labels) +
   geom_segment(aes(x = 0.5, xend = 6.5, y = -2000, yend = -2000), color = "black") +  
   geom_segment(aes(x = 5.5, xend = 8.5, y = -2000, yend = -2000), color = "black") +  
@@ -66,8 +68,14 @@ plot <- ggplot(data_combined, aes(x = Method, fill = structural_category)) +
   theme(axis.text.x = element_text(angle=45, hjust = 1, size=13), 
         axis.text.y = element_text(size=13), 
         axis.title.y = element_text(face = "bold",size=15),
-        axis.title.x = element_blank(),
+        axis.title.x = element_text(face = "bold",size=15),
         legend.text = element_text(size = 15),
         legend.title = element_text(size = 18)) 
+plot
+summary_table <- data_combined %>%
+  count(Method, structural_category) %>%
+  tidyr::pivot_wider(names_from = structural_category, values_from = n, values_fill = 0)
+
+print(summary_table)
 
 ggsave(filename = "read-class.tiff", plot = plot, device = 'tiff', width= 10, height= 7.22, dpi = 500)
