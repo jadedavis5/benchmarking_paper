@@ -33,3 +33,11 @@ done
 
 #Find out how many ISM in BAMBUnoref are 3' fragment (missing 5' end)
 awk '{if ($6 == "incomplete-splice_match") print $15}' BAMBUnoref_classification.txt | sort | uniq -c
+
+
+#Find out how many are intron retention 
+for file in *_classification.txt
+do
+  echo $file
+  cut -f 15 | grep 'intron_retention' | wc -l
+done
