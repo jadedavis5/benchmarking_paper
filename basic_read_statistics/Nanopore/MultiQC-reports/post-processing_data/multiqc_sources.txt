@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	rna_011_ptt_f32_control_chopper-filtered	/scratch/fl3/jdavis/manuscript/work/ad/24721d4fc22bd320f0de5d19a8a855/rna_011_ptt_f32_control_chopper-filtered_fastqc.zip
+FastQC	all_sections	rna_010_ptt_f32_NB29_A_chopper-filtered	/scratch/fl3/jdavis/manuscript/work/ad/24721d4fc22bd320f0de5d19a8a855/rna_010_ptt_f32_NB29_A_chopper-filtered_fastqc.zip

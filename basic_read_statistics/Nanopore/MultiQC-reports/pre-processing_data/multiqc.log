@@ -1,0 +1,3 @@
+[2025-10-23 12:15:11,694] multiqc.core.version_check                         [WARNING]  MultiQC Version v1.31 now available!
+[2025-10-23 12:15:11,694] multiqc.core.file_search                           [INFO   ]  Search path: /scratch/fl3/jdavis/manuscript/work/c2/f2755659a7a11c1c7c76bc184bc4d2
+[2025-10-23 12:15:11,830] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 2 reports

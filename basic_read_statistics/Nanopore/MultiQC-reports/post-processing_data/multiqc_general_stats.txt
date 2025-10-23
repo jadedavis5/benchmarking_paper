@@ -1,0 +1,3 @@
+Sample	fastqc-percent_duplicates	fastqc-percent_gc	fastqc-avg_sequence_length	fastqc-median_sequence_length	fastqc-percent_fails	fastqc-total_sequences
+rna_010_ptt_f32_NB29_A_chopper-filtered	23.388960791646156	52.0	2500.327833551265	2499	40.0	6.128061
+rna_011_ptt_f32_control_chopper-filtered	18.6405699402751	52.0	1033.1523691567781	999	40.0	3.592945

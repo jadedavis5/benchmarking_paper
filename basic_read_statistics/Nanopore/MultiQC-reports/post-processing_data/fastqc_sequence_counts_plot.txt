@@ -1,0 +1,3 @@
+Sample	Unique Reads	Duplicate Reads
+rna_010_ptt_f32_NB29_A_chopper-filtered	4694772.0	1433289.0
+rna_011_ptt_f32_control_chopper-filtered	2923200.0	669745.0

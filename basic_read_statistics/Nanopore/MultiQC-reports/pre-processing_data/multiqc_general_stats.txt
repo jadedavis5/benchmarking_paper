@@ -1,0 +1,3 @@
+Sample	fastqc-percent_duplicates	fastqc-percent_gc	fastqc-avg_sequence_length	fastqc-median_sequence_length	fastqc-percent_fails	fastqc-total_sequences
+rna_010_ptt_f32_NB29_A	21.013065051507226	53.0	5006.729785186569	4999	40.0	8.442162999999999
+rna_011_ptt_f32_control	29.66451832887782	51.0	5008.966185773905	4999	60.0	5.545935
