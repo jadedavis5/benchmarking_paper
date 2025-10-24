@@ -103,3 +103,13 @@ upset(
   ) 
 )
 dev.off()
+#Calculate how many unique Bambu are supported 
+all_tools_bambu <- tracking[,5:8]
+all_tools_bambu %>%
+  filter(
+    RGT_Planet != "-",
+    StringTie3 == "-",
+    IsoQuant == "-",
+    Bambu != "-"
+  ) %>% nrow()
+#Returns 1428

@@ -32,12 +32,17 @@ STdenovo=gffs/denovo/outputAnnotation_STnoref.gff3
 
 
 #Compare ref
-singularity run $gffcompare gffcompare $FLAMESref $BAMBUref $FLAIRref $IQref $STref $RGT
+#singularity run $gffcompare gffcompare $FLAMESref $BAMBUref $FLAIRref $IQref $STref $RGT
 #This gives 72572 transcript structures 
+
+#Also run without RGT so I can see how many transcripts there are overall
+singularity run $gffcompare gffcompare $FLAMESref $BAMBUref $FLAIRref $IQref $STref
+#72359
+
 
 #Compare de novo
 #singularity run $gffcompare gffcompare $BAMBUdenovo $IQdenovo $STdenovo
 #54801 transcript structures 
 
-#Run with RGT planet so I can see whats supported
-singularity run $gffcompare gffcompare $BAMBUdenovo $IQdenovo $STdenovo $RGT
+#Run with RGT planet so I can see whats supported 
+#singularity run $gffcompare gffcompare $BAMBUdenovo $IQdenovo $STdenovo $RGT
