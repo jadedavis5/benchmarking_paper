@@ -38,3 +38,6 @@ singularity run $gffcompare gffcompare $FLAMESref $BAMBUref $FLAIRref $IQref $ST
 #Compare de novo
 #singularity run $gffcompare gffcompare $BAMBUdenovo $IQdenovo $STdenovo
 #54801 transcript structures 
+
+#Run with RGT planet so I can see whats supported
+singularity run $gffcompare gffcompare $BAMBUdenovo $IQdenovo $STdenovo $RGT
