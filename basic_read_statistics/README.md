@@ -1,4 +1,0 @@
-Nanopore data
-
-
-Illumina data 
