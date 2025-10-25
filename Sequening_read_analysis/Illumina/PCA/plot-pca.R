@@ -7,7 +7,7 @@ library(RColorBrewer)
 #Format data
 meta <- read.table("metadata.csv", sep=",", header = TRUE)
 mat <- read.table("rsem.merged.gene_counts.tsv", sep="\t", header = TRUE, row.names=1)
-meta$Group <- factor(meta$treatment, levels = c("Control","NB29"))
+meta$Group <- factor(meta$treatment, levels = c("Control","Diseased"))
 
 mat2 <- mat[, -1] #take out transcript column
 mat3 <- round(mat2)
@@ -43,7 +43,7 @@ p <- ggplot(pcaData, aes(x = PC1, y = PC2,  color=group,  label=name)) +
         axis.text=element_text(size=16), #text=element_text(family="Calibri"),
         axis.title=element_text(size=18, face="bold"), 
         legend.text=element_text(size=18), legend.title=element_text(size=18, face="bold"),
-        strip.text = element_text(size = 16, face = "bold")) +
+        strip.text = element_text(size = 16, face = "bold")) + labs(color = "Treatment") +
   scale_color_manual(values = set) + geom_point(size = 5)
 
 p
