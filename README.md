@@ -1,4 +1,4 @@
-#Code for running annotation programs and creating figures 
+## Code for running annotation programs and creating figures 
 
 Sequening_read_analysis- basic analysis of sequencing reads
 
