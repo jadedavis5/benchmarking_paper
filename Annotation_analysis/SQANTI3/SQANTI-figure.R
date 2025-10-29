@@ -125,7 +125,7 @@ junctions_plot <- ggplot(plot_data, aes(x = Method, y = count, fill = category))
             position = position_stack(vjust = 0.5), size = 5) +
   labs(x = "Method", y = "Number of junctions", fill ="Junction type") +
   scale_fill_brewer(palette = "Set2",labels = category_labels) +
-  
+  expand_limits(y = 22000) +
   
   geom_segment(aes(x = 0.5, xend = 8.5, y = -500, yend = -500), color = "black") +  
   geom_segment(aes(x = 0.5, xend = 0.5, y = -1000, yend = 0), color = "black", size = 0.8) +  
