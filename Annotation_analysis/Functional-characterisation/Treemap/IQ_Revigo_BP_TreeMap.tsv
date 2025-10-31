@@ -1,0 +1,23 @@
+# WARNING - This exported Revigo data is only useful for the specific purpose of constructing a TreeMap visualization.
+# Do not use this table as a general list of non-redundant GO categories, as it sets an extremely permissive
+# threshold to detect redundancies (c=0.10) and fill the 'representative' column, while normally c>=0.4 is recommended.
+# To export a reduced-redundancy set of GO terms, go to the Scatterplot or Table tab, and export from there.
+TermID  Name    Frequency       Value   Uniqueness      Dispensability  Representative
+"GO:0006081"    "aldehyde metabolic process"    0.3231109347542656      1       0.9388523905305549      0.05435711      null
+"GO:0006334"    "nucleosome assembly"   0.20407006405532566     6       0.8731900882737399      0       null
+"GO:0030261"    "chromosome condensation"       0.1360467093702171      2       0.9092625207154138      0.2936791       "nucleosome assembly"
+"GO:0030490"    "maturation of SSU-rRNA"        0.24941896717873135     2       0.6631929910239638      0.4312506       "nucleosome assembly"
+"GO:0006468"    "protein phosphorylation"       0.10770364491808854     2       0.7982841996946678      0.00724212      null
+"GO:0006086"    "pyruvate decarboxylation to acetyl-CoA"        0.07936058046595998     1       0.8193196882396607      0.44423517      "protein phosphorylation"
+"GO:0006412"    "translation"   3.1139580144738583      2       0.7161992469814057      0.30724 "protein phosphorylation"
+"GO:0006457"    "protein folding"       1.2149726961812446      1       0.7400707219627836      0.49637789      "protein phosphorylation"
+"GO:0010499"    "proteasomal ubiquitin-independent protein catabolic process"   0.0037790752602838086   1       0.8559343149868384      0.4686764       "protein phosphorylation"
+"GO:0051603"    "proteolysis involved in protein catabolic process"     3.716720518489126       1       0.7597205150344629      0.46814892      "protein phosphorylation"
+"GO:0006891"    "intra-Golgi vesicle-mediated transport"        0.24375035428830563     1       0.8467744366219707      0.00772651      null
+"GO:0006886"    "intracellular protein transport"       1.677909415566011       1       0.8490834289567403      0.33059685      "intra-Golgi vesicle-mediated transport"
+"GO:0009058"    "biosynthetic process"  21.30075770458969       2       0.9028551083566517      0.09382671      null
+"GO:0045910"    "negative regulation of DNA recombination"      0.11337225780851425     2       0.8870134680700298      -0      null
+"GO:0007166"    "cell surface receptor signaling pathway"       1.8063979744156606      2       0.8544387767718779      0.19167277      "negative regulation of DNA recombination"
+"GO:0009725"    "response to hormone"   4.058726829544811       1       0.9342493025262872      0.2785398       "negative regulation of DNA recombination"
+"GO:0010608"    "post-transcriptional regulation of gene expression"    0.8975303743174046      1       0.8716131678045048      0.38048214      "negative regulation of DNA recombination"
+"GO:0045893"    "positive regulation of DNA-templated transcription"    1.813956124936228       1       0.8513268059787212      0.33842279      "negative regulation of DNA recombination"

@@ -1,0 +1,27 @@
+# WARNING - This exported Revigo data is only useful for the specific purpose of constructing a TreeMap visualization.
+# Do not use this table as a general list of non-redundant GO categories, as it sets an extremely permissive
+# threshold to detect redundancies (c=0.10) and fill the 'representative' column, while normally c>=0.4 is recommended.
+# To export a reduced-redundancy set of GO terms, go to the Scatterplot or Table tab, and export from there.
+TermID  Name    Frequency       Value   Uniqueness      Dispensability  Representative
+"GO:0006081"    "aldehyde metabolic process"    0.3231109347542656      1       0.9495674427464674      0.05435711      null
+"GO:0006334"    "nucleosome assembly"   0.20407006405532566     3       0.892564353373966       0.00924251      null
+"GO:0030261"    "chromosome condensation"       0.1360467093702171      1       0.9229381810417828      0.2936791       "nucleosome assembly"
+"GO:0030490"    "maturation of SSU-rRNA"        0.24941896717873135     1       0.7033029466646595      0.4312506       "nucleosome assembly"
+"GO:0006468"    "protein phosphorylation"       0.10770364491808854     4       0.8265931736674885      0       null
+"GO:0006086"    "pyruvate decarboxylation to acetyl-CoA"        0.07936058046595998     1       0.8384619776735673      0.44423517      "protein phosphorylation"
+"GO:0006412"    "translation"   3.1139580144738583      2       0.7567118060020247      0.30724 "protein phosphorylation"
+"GO:0006457"    "protein folding"       1.2149726961812446      1       0.7769749271050842      0.49637789      "protein phosphorylation"
+"GO:0010499"    "proteasomal ubiquitin-independent protein catabolic process"   0.0037790752602838086   1       0.8757369740994478      0.4686764       "protein phosphorylation"
+"GO:0033260"    "nuclear DNA replication"       0.07936058046595998     1       0.8577575572297693      0.12973832      "protein phosphorylation"
+"GO:0051603"    "proteolysis involved in protein catabolic process"     3.716720518489126       1       0.7939413906810497      0.46814892      "protein phosphorylation"
+"GO:0006886"    "intracellular protein transport"       1.677909415566011       2       0.7915640210049247      0.01164609      null
+"GO:0006891"    "intra-Golgi vesicle-mediated transport"        0.24375035428830563     1       0.8175095382046975      0.33059685      "intracellular protein transport"
+"GO:0016192"    "vesicle-mediated transport"    2.594335166184835       1       0.8393973345959381      0.43161707      "intracellular protein transport"
+"GO:0007166"    "cell surface receptor signaling pathway"       1.8063979744156606      3       0.8721144614553179      0.00869798      null
+"GO:0006952"    "defense response"      8.091000132267634       1       0.9636941843743667      0.35157145      "cell surface receptor signaling pathway"
+"GO:0009725"    "response to hormone"   4.058726829544811       1       0.9653001774165826      0.2785398       "cell surface receptor signaling pathway"
+"GO:0045893"    "positive regulation of DNA-templated transcription"    1.813956124936228       1       0.8484518026193804      0.33842279      "cell surface receptor signaling pathway"
+"GO:0045910"    "negative regulation of DNA recombination"      0.11337225780851425     1       0.9033549131478866      0.19167277      "cell surface receptor signaling pathway"
+"GO:0051726"    "regulation of cell cycle"      0.6216578803166865      1       0.9255357967927937      0.22753804      "cell surface receptor signaling pathway"
+"GO:0032196"    "transposition" 0.015116301041135234    1       0.9900236878722606      0.00603622      null
+"GO:0048544"    "recognition of pollen" 0.8238384067418703      1       0.9861338840004371      0.01070607      null
