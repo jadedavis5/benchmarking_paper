@@ -73,3 +73,27 @@ ggsave(filename = "lengths-boxplot.tiff", plot = final_plot, device = 'tiff', wi
 
 Bambu      FLAIR     FLAMES   IsoQuant StringTie3 RGT Planet 
 "#66C2A5"  "#FC8D62"  "#8DA0CB"  "#E78AC3"  "#A6D854"  "#FFD92F"
+
+
+stats <- df %>%
+  group_by(Method) %>%
+  summarise(
+    n = n(),
+    min = min(length, na.rm = TRUE),
+    Q1 = quantile(length, 0.25, na.rm = TRUE),
+    median = median(length, na.rm = TRUE),
+    Q3 = quantile(length, 0.75, na.rm = TRUE),
+    max = max(length, na.rm = TRUE)
+  )
+
+# Method                               n   min    Q1 median    Q3    max
+# <fct>                            <int> <int> <dbl>  <dbl> <dbl>  <int>
+#   1 RGT_Planet_v2.gtf                52333   152  918    1934 3822  486284
+# 2 outputAnnotation_STref.gff3      58119   152  958    2041 3967  486636
+# 3 outputAnnotation_IQref.gff3      57825   152 1003    2080 3973  486284
+# 4 outputAnnotation_BAMBUref.gff3   54695   152  947    1972 3830. 486284
+# 5 outputAnnotation_FLAIRref.gff3   28979    86  607    2079 4225  353772
+# 6 outputAnnotation_FLAMESref.gff3  20041   170 1759    3004 4638  196230
+# 7 outputAnnotation_STnoref.gff3    18046   202 2379.   3734 5632. 147243
+# 8 outputAnnotation_IQnoref.gff3    15105   361 2175    3387 4929  104299
+# 9 outputAnnotation_BAMBUnoref.gff3 50587   275 1312    2213 3712. 193143

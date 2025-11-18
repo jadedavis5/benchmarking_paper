@@ -44,12 +44,22 @@ levels_plot <- c("RGT.Planet", "IsoQuant.ref","FLAIR.ref","FLAMES.ref","StringTi
 all$Method <- factor(all$Method, levels = levels_plot)
 
 
+cols <- c(
+  "Bambu.refFree"      = "#66C2A5",
+  "FLAIR.ref"          = "#FC8D62",
+  "FLAMES.ref"         = "#8DA0CB",
+  "IsoQuant.ref"       = "#E78AC3",
+  "StringTie3.refFree" = "#A6D854",
+  "RGT.Planet"         = "#FFD92F",
+  "IsoQuant.refFree"   = "#E78AC3"
+)
+
 p <- ggplot(all, aes(x = Method, y = length, fill = Method)) +
   scale_x_discrete(labels = labels1) +
   geom_boxplot(outlier.size = 0.5) +
   labs(y = "Transcript length (bp)") +
   theme_minimal() +
-  scale_fill_brewer(palette = "Set2") +
+  scale_fill_manual(values = cols) +
   theme(legend.position = "none",
         axis.text.x = element_text(angle=45, hjust = 1, size=16),
         axis.title.x = element_blank(),
@@ -58,7 +68,7 @@ p <- ggplot(all, aes(x = Method, y = length, fill = Method)) +
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
   coord_cartesian(ylim = c(0, 10000))
-  
+
   
 final_plot <- p + geom_segment(aes(x = 1.5, xend = 4.5, y = 0, yend = 0), color = "black", size = 0.8) +
   geom_segment(aes(x = 4.5, xend = 7.5, y = 0, yend = 0), color = "black", size = 0.8) +
@@ -70,5 +80,3 @@ final_plot <- p + geom_segment(aes(x = 1.5, xend = 4.5, y = 0, yend = 0), color 
   annotate("text", x = 3, y = -200, label = "Reference guided", size = 6) +
   annotate("text", x = 6, y = -200, label = "De novo", size = 6, fontface = "italic")
 ggsave(filename = "ISM-boxplot.tiff", plot = final_plot, device = 'tiff', width= 10, height= 7.22, dpi = 500)
-  
-  
