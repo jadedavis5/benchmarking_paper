@@ -27,7 +27,7 @@ mat.a <- limma::removeBatchEffect(mat.a, vst$batch)
 assay(vst) <- mat.a
 
 #Make plot
-set <-  colorRampPalette(brewer.pal(7, "Dark2"))(7)
+set <-  colorRampPalette(brewer.pal(7, "Set2"))(7)
 
 png("PCA-elip.png", height = 10, width=12, units ="in", res=350)
 
@@ -36,6 +36,7 @@ percentVar <- round(100 * attr(pcaData, "percentVar"))
 
 p <- ggplot(pcaData, aes(x = PC1, y = PC2,  color=group,  label=name)) + 
   geom_point(size =3) + 
+  ylim(-30,30) +
   xlab(paste0("PC1: ", percentVar[1], "% variance")) + 
   ylab(paste0("PC2: ", percentVar[2], "% variance")) + 
   ggtitle("PCA, variance stabilised") +
