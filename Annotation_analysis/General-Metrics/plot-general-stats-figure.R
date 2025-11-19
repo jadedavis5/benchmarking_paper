@@ -28,11 +28,11 @@ gt_plot <- ggplot(gt_data_long, aes(x = Method, y = Value, fill = Category)) +
        x = "Method") +
   scale_fill_brewer(palette="Set2") +
   theme_minimal() +
-  theme(axis.text.x = element_blank(), axis.text.y = element_text(size = 18),
-        axis.title.y = element_text(face = "bold",size=15),
+  theme(axis.text.x = element_blank(), axis.text.y = element_text(size = 20),
+        axis.title.y = element_text(face = "bold",size=20),
         axis.title.x = element_blank(),
-        legend.text = element_text(size = 18),
-        legend.title = element_text(size = 22),
+        legend.text = element_text(size = 20),
+        legend.title = element_text(size = 21),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
   ylim(-5000, max(gt_data_long$Value))
@@ -61,11 +61,11 @@ splice_plot <- ggplot(splice_data_long, aes(x = Method, y = Percentage, fill = C
   scale_x_discrete(labels = gsub("\\.(ref|refFree)", "", desired_order)) +
   theme_minimal() +
   theme(axis.text.x = element_blank(), 
-        axis.text.y = element_text(size = 18), 
+        axis.text.y = element_text(size = 20), 
         axis.title.x = element_blank(),  
-        axis.title.y = element_text(face = "bold",size = 15),
-        legend.text = element_text(size = 18),
-        legend.title = element_text(size = 22),
+        axis.title.y = element_text(face = "bold",size = 20),
+        legend.text = element_text(size = 20),
+        legend.title = element_text(size = 21),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 splice_plot
@@ -91,11 +91,12 @@ code_plot <- ggplot(code_data_long, aes(x = Method, y = Percentage, fill = Categ
     x = "Method") +
   scale_fill_brewer(palette="Set2") +  
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 50, hjust = 1, size=18), 
-        axis.title.y = element_text(face = "bold",size=15),
+  theme(axis.text.x = element_text(angle = 50, hjust = 1, size=20), 
+        axis.title.y = element_text(face = "bold",size=20),
         axis.title.x = element_blank(),
-        legend.text = element_text(size = 18),
-        legend.title = element_text(size = 22),
+        axis.text.y = element_text(size = 20),
+        legend.text = element_text(size = 20),
+        legend.title = element_text(size = 21),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
   
@@ -147,13 +148,13 @@ sp_plot <- ggplot(sp_data, aes(x = Precision, y = Sensitivity, color = Method, s
   scale_shape_manual(values = method_shapes) + 
   theme_minimal() + 
   theme(
-    axis.text.x = element_text(size = 16,face = "bold"),
-    axis.text.y = element_text(size = 16,face = "bold"),
-    axis.title.x = element_text(size = 16, face = "bold"),
-    axis.title.y = element_text(size = 16, face = "bold"),
-    plot.title = element_text(size = 14, face = "bold"),
+    axis.text.x = element_text(size = 20),
+    axis.text.y = element_text(size = 20),
+    axis.title.x = element_text(size = 20, face = "bold"),
+    axis.title.y = element_text(size = 20, face = "bold"),
+    plot.title = element_blank(),
     legend.title = element_blank(),
-    legend.text = element_text(size = 14),
+    legend.text = element_text(size = 15),
     plot.margin = margin(1, 6, 1, 1, "cm"),
     legend.position = "bottom", 
     legend.justification = "center",
