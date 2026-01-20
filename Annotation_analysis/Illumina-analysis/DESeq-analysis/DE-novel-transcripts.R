@@ -43,7 +43,7 @@ assay(vst) <- mat.a
 #Compare controlA to NB29 infected
 res <- results(dds, contrast=c("group", "NB29A" , "ControlA"))
 
-cA.nbA <- subset(res, (padj <= 0.005 & !is.na(pvalue))& abs(log2FoldChange) >= 2 ) 
+cA.nbA <- subset(res, (padj <= 0.05 & !is.na(pvalue))& abs(log2FoldChange) >= 2 ) 
 I <- data.frame(cA.nbA)
 I$Group <- "Bec"
 I$Transcript <- row.names(I)
@@ -80,7 +80,7 @@ assay(vst) <- mat.a
 #Compare controlA to NB29 infected
 res <- results(dds, contrast=c("group", "NB29A" , "ControlA"))
 
-cA.nbA <- subset(res, (padj <= 0.005 & !is.na(pvalue))& abs(log2FoldChange) >= 2 ) 
+cA.nbA <- subset(res, (padj <= 0.05 & !is.na(pvalue))& abs(log2FoldChange) >= 2 ) 
 I <- data.frame(cA.nbA)
 I$Group <- "Bec"
 I$Transcript <- row.names(I)
